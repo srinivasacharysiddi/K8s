@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
     #kube.disksize.size = '25GB'
     config.vm.provider :virtualbox do |vb|
        vb.customize ["modifyvm", :id, "--memory", "2048"]
-       vb.customize ["modifyvm", :id, "--cpus", "1"]       
+       vb.customize ["modifyvm", :id, "--cpus", "2"]       
     end
     kube.vm.provision "shell", inline: $script
   end
@@ -33,7 +33,7 @@ Vagrant.configure(2) do |config|
     #kube.disksize.size = '25GB'
     config.vm.provider :virtualbox do |vb|
        vb.customize ["modifyvm", :id, "--memory", "2048"]
-       vb.customize ["modifyvm", :id, "--cpus", "1"]       
+       vb.customize ["modifyvm", :id, "--cpus", "2"]       
     end
     kube.vm.provision "shell", inline: $script
   end
